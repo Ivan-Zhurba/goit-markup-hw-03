@@ -31,8 +31,11 @@ ol{
 .list{
     list-style: none;
 }
-img{
+img {
     display: block;
+}
+img :not(:last-child){
+    margin-right: 30px;
 }
 
 
@@ -44,7 +47,10 @@ body {
 .menu .link.current{
     color: var(--second-color);
 }
- 
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .conteiner{
     width: 1200px;
     padding-left: 15px;
@@ -55,12 +61,13 @@ body {
      display: flex;
      align-items: center;
      justify-content: space-between;
+    border: 1px solid #000000;
  }
  .company-conteiner{
       display: flex;
-      align-items: center;
-
- }
+      align-items: center;}
+/*======================HEADER=====================*/
+ 
  .navigation{
      display: flex;
      
@@ -85,6 +92,9 @@ body {
     line-height: 1.19;
     color: var(--second-color);
     margin-right: 93px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
 }
 .logo-color{
     color: var(--main-textcolor);
@@ -132,6 +142,8 @@ body {
     line-height: 1.36;
     color: var(--background-textcolor);
     text-align: center;
+    padding-top: 200px;
+    
 }
 .main-section {
    background: var(--background-color);
@@ -151,6 +163,8 @@ body {
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
      border-radius: 4px;
      display: block - inline;
+     margin: 30px 0 200px 0;
+     padding: 10px 32px;
      
 }
 
@@ -161,14 +175,20 @@ body {
     border-radius: 4px;
 }
  /* ===========О компании==========*/
+ .about {
+display: none;
+ }
  .title-section {
      font-weight: 700;
      font-size: 14px;
      line-height: 1.14;
      letter-spacing: 0.03em;
      text-transform: uppercase;
-    
+     margin: 107px 0 10px 0;
  }
+.title-item:not(:last-child) {
+    margin-right: 30px;
+}
 .content {
     font-weight: normal;
     font-size: 14px;
@@ -176,24 +196,44 @@ body {
     letter-spacing: 0.03em;
     color: var(--address-color);
 }
-/* Наша команда*/
+/*======================WORK========================*/
+.work-container{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+
+/*====================== Наша команда===============*/
 .second-title{
     font-weight: 700px;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
 }
 .title-team {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.1875;
+    margin: 30px 66px 10px 67px;
 }
 .content-team {
     font-weight: normal;
     font-size: 16px;
     line-height: 1.1875;
    color: var(--address-color);
+   margin-right: 97px;
+   margin-left: 97px;
+   margin-bottom: 30px;
+}
+.team-item {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 /* Футер*/
 .footer-section {
