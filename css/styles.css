@@ -7,7 +7,9 @@
     --btn-hovercolor: #188CE8;
     --footer-addresscolor:rgba(255, 255, 255, 0.6);
     --bcg-fonlink: #F5F4FA;
+    --bcg-imgborder: #EEEEEE;
 }
+
 h1,
 h2,
 h3,
@@ -32,11 +34,9 @@ ol{
     list-style: none;
 }
 img {
-    display: block;
+    display: inline-block;
 }
-img :not(:last-child){
-    margin-right: 30px;
-}
+
 
 
 body {
@@ -61,13 +61,18 @@ body {
      display: flex;
      align-items: center;
      justify-content: space-between;
-    border: 1px solid #000000;
- }
- .company-conteiner{
-      display: flex;
-      align-items: center;}
-/*======================HEADER=====================*/
+    }
+    .title-none{
+        display: none;
+    }
  
+/*======================HEADER=====================*/
+ .page-header{
+ border: 1px solid #000000;
+   padding-top: 25px;
+   padding-bottom: 25px;
+
+ }
  .navigation{
      display: flex;
      
@@ -92,8 +97,7 @@ body {
     line-height: 1.19;
     color: var(--second-color);
     margin-right: 93px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+   
     
 }
 .logo-color{
@@ -175,9 +179,14 @@ body {
     border-radius: 4px;
 }
  /* ===========О компании==========*/
- .about {
-display: none;
+  .section-company{
+     padding-bottom: 47px ;
  }
+ .company-conteiner{
+     display: flex;
+     align-items: center;
+ }
+ 
  .title-section {
      font-weight: 700;
      font-size: 14px;
@@ -186,8 +195,9 @@ display: none;
      text-transform: uppercase;
      margin: 107px 0 10px 0;
  }
-.title-item:not(:last-child) {
-    margin-right: 30px;
+.title-item: {
+    margin-left: 30px;
+    
 }
 .content {
     font-weight: normal;
@@ -195,12 +205,23 @@ display: none;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: var(--address-color);
+   
 }
 /*======================WORK========================*/
+ .section-work{
+    padding-top: 47px;
+}
 .work-container{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
+     display: flex;   
+}
+.work-item{
+    flex-basis: calc((100% - 90px)/3);
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.work{
+    margin-left: -30px;
+    margin-top: -50px;
 }
 
 
@@ -229,15 +250,25 @@ display: none;
    margin-bottom: 30px;
 }
 .team-item {
+    flex-basis: calc((100%-120px)/4);
+     margin-left: 30px;
+     margin-top: 50px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
+.team{
+    margin-left: -30px;
+    margin-top: -50px;
+
+}
 /* Футер*/
 .footer-section {
   background:var(--background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-address {
     font-style: normal;
@@ -245,6 +276,7 @@ display: none;
     font-size: 14px;
     line-height: 1.714;
     color: var(--background-textcolor);
+    margin-top: 20px;
 }
 .footer-link {
     font-style: normal;
@@ -253,16 +285,31 @@ display: none;
     line-height: 1.714;
      color: var(--footer-addresscolor);
     }
+    .footer-comunication{
+        margin-top: 9px;
+    }
 
 
     /*===================================PORTFOLIO===================================*/
-.button{
+.portfolio-conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-item:not(:last-child){
+    margin-right: 8px;
+   
+}
+    .button{
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
     color: var(--main-textcolor);
     background: var(--bcg-fonlink);
+    border-radius: 4px;
+    padding: 6px 22px;
+     margin-bottom: 50px;
 }
 .button:focus, 
 .button:hover,
@@ -275,12 +322,39 @@ display: none;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 4px;
+    }
+
 }
-.site-grup{
+.site-grup {
+    display: inline-block;
     font-weight: normal;
     font-size: 16px;
     line-height: 1.86;
     letter-spacing: 0.03em;
     color: var(--address-color);
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px ;
+}
+.portfolio-image{
+    display: flex;
+    flex-wrap: wrap;
+     margin-top: -30px;
+     margin-right: -30px;
 
+}
+.portfolio-item{
+    flex-basis: calc((100%-270px)/9);
+    margin-top: 30px;
+    margin-right: 30px;
+    background: var(--background-textcolor);
+    border: 1px solid var(--bcg-imgborder);
+    box-sizing: border-box;
+}
+.portfolio-item:not(:nth-child(3n)){
+    margin-right: 30px;
 }
